@@ -66,18 +66,13 @@ export class Traffic extends React.Component {
 		return (
 			<div>
 				<QuerySite />
+
 				<Card
 					title={ __(
 						'Maximize your site’s visibility in search engines and view traffic stats in real time.'
 					) }
 					className="jp-settings-description"
 				/>
-
-				{ foundPrivateSites && (
-					<Private
-						{ ...commonProps }
-					/>
-				) }
 
 				{ foundAds && (
 					<Ads
@@ -117,6 +112,7 @@ export class Traffic extends React.Component {
 				{ foundStats && <SiteStats { ...commonProps } /> }
 				{ foundSitemaps && <Sitemaps { ...commonProps } /> }
 				{ foundVerification && <VerificationServices { ...commonProps } /> }
+				{ foundPrivateSites && ( <Private { ...commonProps } /> ) }
 			</div>
 		);
 	}
