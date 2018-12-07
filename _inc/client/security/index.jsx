@@ -24,6 +24,7 @@ import BackupsScan from './backups-scan';
 import Antispam from './antispam';
 import { ManagePlugins } from './manage-plugins';
 import { Monitor } from './monitor';
+import Private from './private';
 import { Protect } from './protect';
 import { SSO } from './sso';
 
@@ -75,13 +76,14 @@ export class Security extends Component {
 			foundAkismet = this.isAkismetFound(),
 			rewindActive = 'active' === get( this.props.rewindStatus, [ 'state' ], false ),
 			foundBackups = this.props.isModuleFound( 'vaultpress' ) || rewindActive,
-			foundMonitor = this.props.isModuleFound( 'monitor' );
+			foundMonitor = this.props.isModuleFound( 'monitor' ),
+			foundPrivateSites = this.props.isModuleFound( 'private' );
 
 		if ( ! this.props.searchTerm && ! this.props.active ) {
 			return null;
 		}
 
-		if ( ! foundSso && ! foundProtect && ! foundAkismet && ! foundBackups && ! foundMonitor ) {
+		if ( ! foundSso && ! foundProtect && ! foundAkismet && ! foundBackups && ! foundMonitor && ! foundPrivateSites ) {
 			return null;
 		}
 
@@ -107,6 +109,7 @@ export class Security extends Component {
 				<ManagePlugins { ...commonProps } />
 				{ foundProtect && <Protect { ...commonProps } /> }
 				{ foundSso && <SSO { ...commonProps } /> }
+				{ foundPrivateSites && ( <Private { ...commonProps } /> ) }
 			</div>
 		);
 	}
