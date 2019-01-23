@@ -24,7 +24,7 @@ import BackupsScan from './backups-scan';
 import Antispam from './antispam';
 import { ManagePlugins } from './manage-plugins';
 import { Monitor } from './monitor';
-import Private from './private';
+import { Private } from './private';
 import { Protect } from './protect';
 import { SSO } from './sso';
 
@@ -109,7 +109,7 @@ export class Security extends Component {
 				<ManagePlugins { ...commonProps } />
 				{ foundProtect && <Protect { ...commonProps } /> }
 				{ foundSso && <SSO { ...commonProps } /> }
-				{ foundPrivateSites && ( <Private { ...commonProps } /> ) }
+				{ foundPrivateSites && <Private { ...commonProps } /> }
 			</div>
 		);
 	}
