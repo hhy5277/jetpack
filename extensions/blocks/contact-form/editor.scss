@@ -1,3 +1,4 @@
+@import '../../shared/gutenberg-colors.scss';
 
 .jetpack-contact-form {
 	padding: 10px 18px;
@@ -75,7 +76,7 @@
 
 // Duplicated to elevate specificity in order to overwrite core styles
 .jetpack-field-label__input.jetpack-field-label__input.jetpack-field-label__input {
-	border-color: #fff;
+	border-color: $white;
 	border-radius: 0;
 	font-weight: 600;
 	margin: 0;
@@ -83,7 +84,7 @@
 	padding: 0;
 
 	&:focus {
-		border-color: #fff;
+		border-color: $white;
 		box-shadow: none;
 	}
 }
