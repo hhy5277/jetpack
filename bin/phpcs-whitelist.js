@@ -12,4 +12,5 @@ module.exports = [
 	'modules/module-info.php',
 	'modules/theme-tools/social-menu/',
 	'modules/private.php',
+	'modules/private/',
 ];
