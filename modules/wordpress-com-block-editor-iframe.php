@@ -68,8 +68,8 @@ function jetpack_enqueue_wpcom_block_editor_scripts() {
 			),
 			'isCalypsoify'    => $is_calypsoify,
 			'richTextToolbar' => array(
-				'justify'   => __( 'Justify' ),
-				'underline' => __( 'Underline' ),
+				'justify'   => __( 'Justify', 'jetpack' ),
+				'underline' => __( 'Underline', 'jetpack' ),
 			),
 		)
 	);
