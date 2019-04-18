@@ -112,6 +112,6 @@ function jetpack_add_wpcom_block_editor_tinymce_plugins( $plugin_array ) {
  * Add the filters to customize the Tiny MCE editor for the WordPress.com block editor integration.
  */
 function jetpack_add_wpcom_block_editor_tinyme_filters() {
-	add_filter( 'mce_external_plugins', 'jetpack_add_wpcom_block_editor_tinymce_plugin' );
+	add_filter( 'mce_external_plugins', 'jetpack_add_wpcom_block_editor_tinymce_plugins' );
 }
 add_action( 'admin_init', 'jetpack_add_wpcom_block_editor_tinyme_filters' );
